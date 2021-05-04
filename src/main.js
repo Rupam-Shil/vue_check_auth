@@ -1,5 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import firebase from 'firebase';
+import firebaseConfig from './config';
 
-createApp(App).use(router).mount('#app')
+firebase.initializeApp(firebaseConfig);
+createApp(App)
+	.use(router)
+	.mount('#app');
